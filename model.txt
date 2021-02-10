@@ -1,0 +1,314 @@
+FeedForwardTransformer(
+  (encoder): Encoder(
+    (after_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (embed): Sequential(
+      (0): Embedding(87, 256, padding_idx=0)
+      (1): ScaledPositionalEncoding(
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (encoders_): ModuleList(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(5,), stride=(1,), padding=(2,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(25,), stride=(1,), padding=(12,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(13,), stride=(1,), padding=(6,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(9,), stride=(1,), padding=(4,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+  )
+  (duration_predictor): DurationPredictor(
+    (conv): ModuleList(
+      (0): Sequential(
+        (0): SepConv1d(
+          (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+          (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+        )
+        (1): ReLU()
+        (2): LayerNorm(
+          (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        )
+        (3): Dropout(p=0.5, inplace=False)
+      )
+      (1): Sequential(
+        (0): SepConv1d(
+          (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+          (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+        )
+        (1): ReLU()
+        (2): LayerNorm(
+          (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+        )
+        (3): Dropout(p=0.5, inplace=False)
+      )
+    )
+    (linear): Linear(in_features=256, out_features=1, bias=True)
+  )
+  (energy_predictor): EnergyPredictor(
+    (predictor): VariancePredictor(
+      (conv): ModuleList(
+        (0): Sequential(
+          (0): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+            (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          )
+          (1): ReLU()
+          (2): LayerNorm(
+            (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          )
+          (3): Dropout(p=0.5, inplace=False)
+        )
+        (1): Sequential(
+          (0): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+            (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          )
+          (1): ReLU()
+          (2): LayerNorm(
+            (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          )
+          (3): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (linear): Linear(in_features=256, out_features=1, bias=True)
+    )
+  )
+  (energy_embed): Linear(in_features=256, out_features=256, bias=True)
+  (pitch_predictor): PitchPredictor(
+    (predictor): VariancePredictor(
+      (conv): ModuleList(
+        (0): Sequential(
+          (0): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+            (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          )
+          (1): ReLU()
+          (2): LayerNorm(
+            (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          )
+          (3): Dropout(p=0.5, inplace=False)
+        )
+        (1): Sequential(
+          (0): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(3,), stride=(1,), padding=(1,), groups=256)
+            (pointwise): Conv1d(256, 256, kernel_size=(1,), stride=(1,))
+          )
+          (1): ReLU()
+          (2): LayerNorm(
+            (layer_norm): LayerNorm((256,), eps=1e-12, elementwise_affine=True)
+          )
+          (3): Dropout(p=0.5, inplace=False)
+        )
+      )
+      (linear): Linear(in_features=256, out_features=1, bias=True)
+    )
+  )
+  (pitch_embed): Linear(in_features=256, out_features=256, bias=True)
+  (length_regulator): LengthRegulator()
+  (decoder): Encoder(
+    (after_norm): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (embed): Sequential(
+      (0): ScaledPositionalEncoding(
+        (dropout): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (encoders_): ModuleList(
+      (0): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(17,), stride=(1,), padding=(8,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (1): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(21,), stride=(1,), padding=(10,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (2): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(9,), stride=(1,), padding=(4,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+      (3): EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_q): Linear(in_features=256, out_features=256, bias=True)
+          (linear_k): Linear(in_features=256, out_features=256, bias=True)
+          (linear_v): Linear(in_features=256, out_features=256, bias=True)
+          (linear_out): Linear(in_features=256, out_features=256, bias=True)
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (feed_forward): MultiLayeredSepConv1d(
+          (w_1): SepConv1d(
+            (depthwise): Conv1d(256, 256, kernel_size=(13,), stride=(1,), padding=(6,), groups=256)
+            (pointwise): Conv1d(256, 1024, kernel_size=(1,), stride=(1,))
+          )
+          (w_2): SepConv1d(
+            (depthwise): Conv1d(1024, 1024, kernel_size=(1,), stride=(1,), groups=1024)
+            (pointwise): Conv1d(1024, 256, kernel_size=(1,), stride=(1,))
+          )
+          (dropout): Dropout(p=0.2, inplace=False)
+        )
+        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+        (dropout): Dropout(p=0.2, inplace=False)
+        (concat_linear): Linear(in_features=512, out_features=256, bias=True)
+      )
+    )
+  )
+  (feat_out): Linear(in_features=256, out_features=80, bias=True)
+  (duration_criterion): DurationPredictorLoss(
+    (criterion): MSELoss()
+  )
+  (energy_criterion): EnergyPredictorLoss(
+    (criterion): MSELoss()
+  )
+  (pitch_criterion): PitchPredictorLoss(
+    (criterion): MSELoss()
+  )
+  (criterion): L1Loss()
+)

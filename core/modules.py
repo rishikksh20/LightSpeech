@@ -276,7 +276,7 @@ class MultiLayeredSepConv1d(torch.nn.Module):
     """
 
     def __init__(self, in_chans: int, hidden_chans: int, kernel_size:int, dropout_rate: float):
-        super(MultiLayeredConv1d, self).__init__()
+        super(MultiLayeredSepConv1d, self).__init__()
         self.w_1 = SepConv1d(in_chans, hidden_chans, kernel_size,
                                    stride=1, padding=(kernel_size - 1) // 2)
         self.w_2 = SepConv1d(hidden_chans, in_chans, 1,
