@@ -1,6 +1,6 @@
 data:
-  data_dir: 'H:\Deepsync\backup\fastspeech\data\'
-  wav_dir: 'H:\Deepsync\backup\deepsync\LJSpeech-1.1\wavs\'
+  data_dir: '/workspace/LightSpeech/data/'
+  wav_dir: '/workspace/LJSpeech-1.1/wavs/'
   # Compute statistics
   e_mean: 21.578571319580078
   e_std: 18.916799545288086
