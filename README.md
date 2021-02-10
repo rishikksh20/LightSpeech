@@ -1,5 +1,5 @@
 # LightSpeech
-UnOfficial PyTorch implementation of [LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search](https://arxiv.org/pdf/2102.04040). This repo uses the FastSpeech 2 implementation of Espnet as a base. In this implementation I tried to replicate the exact paper details but still some modification required for better model, this repo open for any suggestion and improvement. This repo uses Nvidia's tacotron 2 preprocessing for audio pre-processing and MelGAN as vocoder.
+UnOfficial PyTorch implementation of [LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search](https://arxiv.org/pdf/2102.04040). This repo uses the FastSpeech 2 implementation of Espnet as a base. This repo only implements the final version of LightSpeech model not the Neural Architecture Search as mentioned in paper.
 
 
 ## Requirements :
