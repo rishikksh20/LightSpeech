@@ -51,7 +51,7 @@ model:
   positionwise_layer_type : "conv1d" # linear
   encoder_positionwise_conv_kernel_size : [5, 25, 13, 9] # 1
   decoder_positionwise_conv_kernel_size : [17, 21, 9, 13]
-  postnet_layers: 5
+  postnet_layers: 0
   postnet_filts: 5
   postnet_chans: 256
   use_masking: True
