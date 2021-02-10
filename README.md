@@ -27,7 +27,7 @@ pip install -r requirements.txt
 `filelists` folder contains MFA (Motreal Force aligner) processed LJSpeech dataset files so you don't need to align text with audio (for extract duration) for LJSpeech dataset.
 For other dataset follow instruction [here](https://github.com/ivanvovk/DurIAN#6-how-to-align-your-own-data). For other pre-processing run following command :
 ```
-python .\nvidia_preprocessing.py -d path_of_wavs
+python .\nvidia_preprocessing.py -d path_of_wavs -c configs/default.yaml
 ```
 For finding the min and max of F0 and Energy
 ```buildoutcfg
