@@ -59,13 +59,6 @@ python export_torchscript.py -c configs/default.yaml -n fastspeech_scrip --outdi
 WIP
 
 
-## Note
-* Coding of this repo is roughly done just to re-produce the paper and experimentation purpose. Needed a code cleanup and opyimization for better use.
-* Currently this repo produces good quality audio but still it is in WIP, many improvement needed.
-* Loss curve for F0 is quite high.
-* I am using raw F0 and energy for train a model, but we can also use normalize F0 and energy for stable training.
-* Using `Postnet` for better audio quality.
-
 ## References
 - [LightSpeech: Lightweight and Fast Text to Speech with Neural Architecture Search](https://arxiv.org/pdf/2102.04040)
 - [FastSpeech 2: Fast and High-Quality End-to-End Text to Speech](https://arxiv.org/abs/2006.04558)
