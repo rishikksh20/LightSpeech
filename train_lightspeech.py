@@ -203,7 +203,7 @@ def create_gta(args, hp, hp_str, logger):
     global_step = 0
     idim = len(valid_symbols)
     odim = hp.audio.num_mels
-    model = fastspeech.FeedForwardTransformer(idim, odim, args)
+    model = lightspeech.FeedForwardTransformer(idim, odim, hp)
     # set torch device
     if os.path.exists(args.checkpoint_path):
         print('\nSynthesis GTA Session...\n')
