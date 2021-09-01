@@ -57,8 +57,8 @@ python .\inference.py -c .\configs\default.yaml -p .\checkpoints\first_1\xyz.pyt
 ```commandline
 python export_torchscript.py -c configs/default.yaml -n fastspeech_scrip --outdir etc
 ```
-## Checkpoint and samples:
-WIP
+## Note :
+* For more complete and end to end Voice cloning or Text to Speech (TTS) toolbox 🧰 please visit [Deepsync Technologies](https://deepsync.co/).
 
 
 ## References
